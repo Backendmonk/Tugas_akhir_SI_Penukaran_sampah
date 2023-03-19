@@ -15,12 +15,38 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="login_asset/css/style.css">
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Login</title>
   </head>
   <body>
   
 
+  <?php
+
+        if (isset($_GET['test'])) {
+
+          ?>
+
+              <script>
+
+                swal({
+                  title: "Good job!",
+                  text: "You clicked the button!",
+                  icon: "success",
+                  button: "Aww yiss!",
+                });
+
+                setTimeout(function(){
+                        window.location="user/index.php";
+                       }, 2000);
+              </script>
+
+
+          <?php
+          
+        }
+
+  ?>
   
   <div class="content">
     <div class="container">
@@ -35,7 +61,7 @@
               <h3><strong>DESA SINGAPADU TENGAH SUKAWATI</strong></h3>
               <p class="mb-4">Selamat datang di aplikasi Penukaran sampah, Silahkan Login dengan akun anda</p>
             </div>
-            <form action="#" method="post">
+            <form action="Action_front/loginproses.php" method="post">
               <div class="form-group first">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username">
