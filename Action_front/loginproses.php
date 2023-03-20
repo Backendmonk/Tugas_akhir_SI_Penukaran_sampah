@@ -1,7 +1,15 @@
 <?php
 
     include 'koneksi.php';
+    
 
+    session_start();
+
+    if (@$_SESSION['sesiuser']!="") {
+        header("Location:../user/index.php");
+    }elseif (@$_SESSION['sesipetugas']!="") {
+        header("Location:../petugas/index.php");
+    }
     
     
 
@@ -24,13 +32,13 @@
         if ($rowlog == 1) {
                 if ($arraylog['hak_akses'] ='user') {
 
-
+                    $_SESSION['sesiuser']= $arraylog['id_user'];
                     $hak = "user";
                     header("Location: ../index.php?hak=$hak");
                  exit;
                     
                 }elseif ($arraylog['hak_akses']= 'petugas') {
-                    
+                    $_SESSION['sesipetugas'] = $arraylog['id_user'];
                     $hak = "petugas";
 
                     header("Location:../index.php?hak=$hak");
