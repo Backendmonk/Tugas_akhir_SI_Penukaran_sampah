@@ -70,9 +70,6 @@
                   
               }
 
-
-
-
                 ?>
                 </script>
 
@@ -98,12 +95,12 @@
             <form action="Action_front/loginproses.php" method="post">
               <div class="form-group first">
                 <label for="username">Email</label>
-                <input type="email" name="email" class="form-control"  id="Email">
+                <input type="email" required name="email" class="form-control"  id="Email">
 
               </div>
               <div class="form-group last mb-4">
                 <label for="password">Password</label>
-                <input type="password" name = "password" class="form-control" id="password">
+                <input type="password"  required name = "password" class="form-control" id="password">
                 
               </div>
               
