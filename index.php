@@ -23,24 +23,58 @@
 
   <?php
 
-        if (isset($_GET['test'])) {
+        if (isset($_GET['hak'])) {
+
+
+          $hak  = $_GET['hak'];
+
+          
 
           ?>
 
               <script>
 
                 swal({
-                  title: "Good job!",
-                  text: "You clicked the button!",
+                  title: "Berhasil Login!",
+                  text: "Selamat Datang!",
                   icon: "success",
-                  button: "Aww yiss!",
+                  button: "Oke !",
                 });
 
-                setTimeout(function(){
+
+              <?php 
+
+              if ($hak ="user") {
+                ?>
+
+                  setTimeout(function(){
                         window.location="user/index.php";
                        }, 2000);
-              </script>
+              
 
+
+                <?php
+                  
+
+              }elseif ($hak = "petugas") {
+                ?>
+
+                setTimeout(function(){
+                          window.location="petugas/index.php";
+                         }, 2000);
+               
+  
+  
+                  <?php
+
+                  
+              }
+
+
+
+
+                ?>
+                </script>
 
           <?php
           
@@ -63,13 +97,13 @@
             </div>
             <form action="Action_front/loginproses.php" method="post">
               <div class="form-group first">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username">
+                <label for="username">Email</label>
+                <input type="email" name="email" class="form-control"  id="Email">
 
               </div>
               <div class="form-group last mb-4">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" name = "password" class="form-control" id="password">
                 
               </div>
               
@@ -80,7 +114,7 @@
  
               </div>
 
-              <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
+              <input name = "flogin" type="submit" value="Log In" class="btn text-white btn-block btn-primary">
 
               
             </form>
