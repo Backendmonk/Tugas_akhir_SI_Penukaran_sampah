@@ -14,7 +14,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Profile
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="informasi.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                                 Informasi 
                             </a>
