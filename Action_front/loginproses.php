@@ -2,14 +2,14 @@
 
     include 'koneksi.php';
     
-
+    //mulai sesi dan cek apakah sesi sudah mulai atau tidak, jika sesi sudah mulai maka langsung heading ke halaman sesuai sesi
     session_start();
 
     if (@$_SESSION['sesiuser']!="") {
         header("Location:../user/index.php");
     }elseif (@$_SESSION['sesipetugas']!="") {
         header("Location:../petugas/index.php");
-    }elseif ($$_SESSION['sesiketua']!="") {
+    }elseif (@$_SESSION['sesiketua']!="") {
         header("Location../ketua/index.php");
     }
     
@@ -31,6 +31,7 @@
 
         $rowlog = mysqli_num_rows($qlog);
 
+        // buat setiap hak akses memiliki sesi , tiap sesi akan membawa id dari akun yang diinput
         if ($rowlog == 1) {
                 if ($arraylog['hak_akses'] ='user') {
 
@@ -45,7 +46,7 @@
 
                     header("Location:../index.php?hak=$hak");
                     exit;
-                }elseif ($arraylog['hak_akses']='ketua') {
+                }elseif ($arraylog['hak_akses']='Ketua') {
                     $_SESSION['sesiketua'] = $arraylog['id_user'];
                     $hak = "ketua";
 
