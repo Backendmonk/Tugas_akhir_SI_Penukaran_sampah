@@ -21,76 +21,7 @@
   <body>
   
 
-  <?php
-
-        if (isset($_GET['hak'])) {
-
-
-          $hak  = $_GET['hak'];
-
-          
-
-          ?>
-
-              <script>
-
-                swal({
-                  title: "Berhasil Login!",
-                  text: "Selamat Datang!",
-                  icon: "success",
-                  button: "Oke !",
-                });
-
-
-              <?php 
-
-              if ($hak ="user") {
-                ?>
-
-                  setTimeout(function(){
-                        window.location="user/index.php";
-                       }, 2000);
-              
-
-
-                <?php
-                  
-
-              }elseif ($hak = "petugas") {
-                ?>
-
-                setTimeout(function(){
-                          window.location="petugas/index.php";
-                         }, 2000);
-               
-  
-  
-                  <?php
-
-                  
-              }elseif ($hak = "ketua") {
-                ?>
-
-                setTimeout(function(){
-                          window.location="ketua/index.php";
-                         }, 2000);
-               
-  
-  
-                  <?php
-
-                  
-              }
-
-                ?>
-                </script>
-
-          <?php
-          
-        }
-
-  ?>
-  
+   
   <div class="content">
     <div class="container">
       <div class="row">
@@ -102,7 +33,7 @@
             <div class="col-md-8">
               <div class="mb-4">
               <h3><strong>DESA SINGAPADU TENGAH SUKAWATI</strong></h3>
-              <p class="mb-4">Selamat datang di aplikasi Penukaran sampah, Silahkan Login dengan akun anda</p>
+              <p class="mb-4">Silahkan Daftar akun Anda sebagai Admin</p>
             </div>
             <form action="Action_front/loginproses.php" method="post">
               <div class="form-group first">
@@ -110,6 +41,27 @@
                 <input type="email" required name="email" class="form-control"  id="Email">
 
               </div>
+
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <input type="password"  required name = "password" class="form-control" id="password">
+                
+              </div>
+              
+
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <input type="password"  required name = "password" class="form-control" id="password">
+                
+              </div>
+              
+
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <input type="password"  required name = "password" class="form-control" id="password">
+                
+              </div>
+              
               <div class="form-group last mb-4">
                 <label for="password">Password</label>
                 <input type="password"  required name = "password" class="form-control" id="password">

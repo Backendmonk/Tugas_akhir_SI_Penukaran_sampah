@@ -9,6 +9,8 @@
         header("Location:../user/index.php");
     }elseif (@$_SESSION['sesipetugas']!="") {
         header("Location:../petugas/index.php");
+    }elseif ($$_SESSION['sesiketua']!="") {
+        header("Location../ketua/index.php");
     }
     
     
@@ -40,6 +42,12 @@
                 }elseif ($arraylog['hak_akses']= 'petugas') {
                     $_SESSION['sesipetugas'] = $arraylog['id_user'];
                     $hak = "petugas";
+
+                    header("Location:../index.php?hak=$hak");
+                    exit;
+                }elseif ($arraylog['hak_akses']='ketua') {
+                    $_SESSION['sesiketua'] = $arraylog['id_user'];
+                    $hak = "ketua";
 
                     header("Location:../index.php?hak=$hak");
                     exit;
