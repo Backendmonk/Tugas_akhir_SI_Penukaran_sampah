@@ -23,16 +23,6 @@
 
   <?php
 
-   //mulai sesi dan cek apakah sesi sudah mulai atau tidak, jika sesi sudah mulai maka langsung heading ke halaman sesuai sesi
-   session_start();
-
-   if (@$_SESSION['sesiuser']!="") {
-       header("Location:../user/index.php");
-   }elseif (@$_SESSION['sesipetugas']!="") {
-       header("Location:../petugas/index.php");
-   }elseif (@$_SESSION['sesiketua']!="") {
-       header("Location../ketua/index.php");
-   }
   
 
     //cek hak akses dan heading tiap hak akses ke halaman masing masing
@@ -56,7 +46,7 @@
 
               <?php 
 
-              if ($hak ="user") {
+              if ($hak =="user") {
                 ?>
 
                   setTimeout(function(){
@@ -68,7 +58,7 @@
                 <?php
                   
 
-              }elseif ($hak = "petugas") {
+              }elseif ($hak =="petugas") {
                 ?>
 
                 setTimeout(function(){
@@ -80,7 +70,7 @@
                   <?php
 
                   
-              }elseif ($hak = "ketua") {
+              }elseif ($hak =="ketua") {
                 ?>
 
                 setTimeout(function(){
@@ -116,9 +106,6 @@
                   icon: "error",
                   button: "Oke !",
                 });
-                  setTimeout(function(){
-                    window.location="index.php";
-                  },2000);
             </script>
 
 

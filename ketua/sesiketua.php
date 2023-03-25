@@ -5,12 +5,12 @@
 
         session_start();
 
-        if (!isset($_SESSION['sesiuser'])) {
+        if (!isset($_SESSION['sesiketua'])) {
             header("Location:../index.php");
         }
 
 
-        $id = $_SESSION['sesiuser'];
+        $id = $_SESSION['sesiketua'];
         
         $selectuser = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE `id_user` = '$id'");
 
