@@ -2,23 +2,8 @@
 
     include 'koneksi.php';
     
-    //mulai sesi dan cek apakah sesi sudah mulai atau tidak, jika sesi sudah mulai maka langsung heading ke halaman sesuai sesi
-    session_start();
-
-    if (@$_SESSION['sesiuser']!="") {
-        header("Location:../user/index.php");
-    }elseif (@$_SESSION['sesipetugas']!="") {
-        header("Location:../petugas/index.php");
-    }elseif (@$_SESSION['sesiketua']!="") {
-        header("Location../ketua/index.php");
-    }
     
     
-
-
-    
-
-
       if (isset($_POST['flogin'])) {
 
         $email = $_POST['email'];
@@ -54,6 +39,10 @@
                     exit;
                 }
 
+        }elseif ($rowlog == 0) {
+            $status = "error";
+            header("Location:../index.php?status=$status");
+            exit;
         }
 
         

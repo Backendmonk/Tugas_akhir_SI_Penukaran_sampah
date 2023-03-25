@@ -23,12 +23,24 @@
 
   <?php
 
-        if (isset($_GET['hak'])) {
+   //mulai sesi dan cek apakah sesi sudah mulai atau tidak, jika sesi sudah mulai maka langsung heading ke halaman sesuai sesi
+   session_start();
 
+   if (@$_SESSION['sesiuser']!="") {
+       header("Location:../user/index.php");
+   }elseif (@$_SESSION['sesipetugas']!="") {
+       header("Location:../petugas/index.php");
+   }elseif (@$_SESSION['sesiketua']!="") {
+       header("Location../ketua/index.php");
+   }
+  
+
+    //cek hak akses dan heading tiap hak akses ke halaman masing masing
+
+        if (isset($_GET['hak'])) {
 
           $hak  = $_GET['hak'];
 
-          
 
           ?>
 
@@ -86,9 +98,35 @@
                 </script>
 
           <?php
-          
+            
         }
 
+        //cek status error apakah true atau tidak
+
+        if (isset($_GET['status'])) {
+
+          $stauts =  $_GET['status'];
+          if ($status =  "error") {
+            ?>
+
+            <script>
+              swal({
+                  title: "Gagal!",
+                  text: "Email Atau Password Salah!",
+                  icon: "error",
+                  button: "Oke !",
+                });
+                  setTimeout(function(){
+                    window.location="index.php";
+                  },2000);
+            </script>
+
+
+            <?php
+          }
+        }
+
+        
   ?>
   
   <div class="content">
