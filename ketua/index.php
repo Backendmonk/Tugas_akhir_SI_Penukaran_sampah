@@ -46,16 +46,15 @@
                     <center>
                         
 
-                    <video width="500" height="500" controls>
-                        <source src="asset/video.mp4" type="video/mp4">
-                        </video>
+                  <?php
 
-                        <h5>Selamat datang di sistem penukaran sampah masa kini<br> menuju lingkungan yang bersih dan asri</h5>
+                            include 'chart.php';
+                  ?>
                     </center>
 
                         <br>
                         <br>
-                        <h2> History Point </h2>
+                        <h2> History Penarikan Poin</h2>
                         <br>
                     <div class="card mb-4">
                     <div class="card-body">
