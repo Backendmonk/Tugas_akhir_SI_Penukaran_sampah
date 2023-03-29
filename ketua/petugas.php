@@ -14,7 +14,7 @@
                         <br>
                         <h2> Data Petugas</h2>
                         <br>
-                        <form action="" method="post">
+                        <form action="tambahpetugas.php" method="post">
                         <button type="submit" class="btn btn-outline-info">Tambah Petugas</button>
                         </form>
                         
