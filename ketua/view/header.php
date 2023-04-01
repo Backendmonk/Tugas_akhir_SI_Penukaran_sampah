@@ -11,7 +11,7 @@
         <link href="../css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <?php
 

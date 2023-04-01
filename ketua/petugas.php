@@ -2,6 +2,7 @@
 <?php
             include 'view/header.php';
             include 'view/sidebar.php';
+            include '../Action_front/koneksi.php';
 
 ?>
             <div id="layoutSidenav_content">
@@ -26,13 +27,43 @@
                                     <thead>
                                         <tr>
                                             <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Alamat</th>
+                                            <th>Email</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>No Telepon</th>
+                                            <th>Hak Akses</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
+                                    
+                                    <tbody>
+
+                                    <?php
+                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE hak_akses = 'petugas'");
+
+                                            while ($data = mysqli_fetch_array($selectdata)) {
+                                                ?>
+
+                                        <tr>
+                                            <td><?php echo $data['nama'] ?></td>
+                                            <td><?php echo $data['alamat'] ?></td>
+                                            <td><?php echo $data['email'] ?></td>
+                                            <td><?php echo $data['jenis_kelamin'] ?></td>
+                                            <td><?php echo $data['no_telepon'] ?></td>
+                                            <td><?php echo $data['hak_akses'] ?></td>
+                                            <td></td>
+                                        </tr>
+
+
+                                    <?php
+                                            }
+                                    ?>
+                                        
+                                    </tbody>
+                                    
+
+                                         
+                                
 
                                     </table>
                     <div>   
