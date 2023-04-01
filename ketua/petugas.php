@@ -51,7 +51,7 @@
                                             <td><?php echo $data['jenis_kelamin'] ?></td>
                                             <td><?php echo $data['no_telepon'] ?></td>
                                             <td><?php echo $data['hak_akses'] ?></td>
-                                            <td></td>
+                                            <td>(make something more clear than that )</td>
                                         </tr>
 
 
