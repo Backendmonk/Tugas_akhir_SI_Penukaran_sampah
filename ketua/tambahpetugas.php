@@ -46,7 +46,7 @@
                                    });
 
                                    setTimeout(function(){
-                        window.location="tambah.php";
+                        window.location="tambahpetugas.php";
                        }, 2000);
                                    </script>
 
