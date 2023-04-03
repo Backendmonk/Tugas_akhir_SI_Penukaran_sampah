@@ -16,20 +16,48 @@ include '../../Action_front/koneksi.php';
     }
 
     if (isset($_POST['fdaftar'])) {
-        
-        
-        $qdaftar = mysqli_query($koneksi,"INSERT INTO `tb_user`(`id_user`, `nama`, `alamat`, `email`, `jenis_kelamin`, `no_telepon`, `password`, `hak_akses`) VALUES ('$id','$nama','$alamat','$email','$jeniskelamin','$nohp','$password','$akses')");
 
-        if ($qdaftar) {
-            $statusdaftar = "berhasil";
-
-            header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
-        }else{
-
+        if ($nama =="") {
             $statusdaftar = "gagal";
 
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+        }elseif ($alamat=="") {
+            header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+
         }
+        elseif ($email=="") {
+            header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+
+        }
+        elseif ($password=="") {
+            header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+
+        }
+        elseif ($nohp=="") {
+            header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+
+        }elseif ($jeniskelamin=="") {
+            header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+
+        }else{
+
+            $qdaftar = mysqli_query($koneksi,"INSERT INTO `tb_user`(`id_user`, `nama`, `alamat`, `email`, `jenis_kelamin`, `no_telepon`, `password`, `hak_akses`) VALUES ('$id','$nama','$alamat','$email','$jeniskelamin','$nohp','$password','$akses')");
+
+                    if ($qdaftar) {
+                        $statusdaftar = "berhasil";
+
+                        header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+                    }else{
+
+                        $statusdaftar = "gagal";
+
+                        header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
+                    }
+
+        }
+        
+        
+        
     }
 
 

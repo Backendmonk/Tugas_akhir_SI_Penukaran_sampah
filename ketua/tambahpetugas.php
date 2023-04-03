@@ -55,13 +55,13 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
-                                <input type="email" required name = "email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <input type="email"  name = "email" class="form-control" id="inputEmail4" placeholder="Email">
                                 </div>
 
 
                                 <div class="form-group col-md-6">
                                 <label for="inputPassword4">Password</label>
-                                <input type="password" required class="form-control" id="inputPassword4" placeholder="Password" name = "password">
+                                <input type="password"  class="form-control" id="inputPassword4" placeholder="Password" name = "password">
                                 </div>
                             </div>
                            
@@ -69,19 +69,19 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                 <label for="inputCity">Nama</label>
-                                <input type="text"  required name = "nama" placeholder="Nama" class="form-control" id="inputCity">
+                                <input type="text"   name = "nama" placeholder="Nama" class="form-control" id="inputCity">
                                 </div>
 
                                 <div class="form-row">
                                 <div class="form-group col-md-6">
                                 <label for="inputCity">Alamat</label>
-                                <input type="text" required name = "alamat" placeholder="Alamat" class="form-control" id="inputCity">
+                                <input type="text"  name = "alamat" placeholder="Alamat" class="form-control" id="inputCity">
                                 </div>
 
                                 <div class="form-row">
                                 <div class="form-group col-md-6">
                                 <label for="inputCity">No Telepon</label>
-                                <input type="text" required name = "nohp" placeholder="No Telepon" class="form-control" id="inputCity">
+                                <input type="text"  name = "nohp" placeholder="No Telepon" class="form-control" id="inputCity">
                                 </div>
 
                                 <div class="form-group col-md-6">
