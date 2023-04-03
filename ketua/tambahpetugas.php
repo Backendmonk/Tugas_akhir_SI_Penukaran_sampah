@@ -26,6 +26,10 @@
                                     icon: "success",
                                     button: "Oke !",
                                     });
+
+                                    setTimeout(function(){
+                        window.location="tambahpetugas.php";
+                       }, 2000);
                                     </script>
 
 
@@ -40,6 +44,10 @@
                                    icon: "error",
                                    button: "Oke !",
                                    });
+
+                                   setTimeout(function(){
+                        window.location="tambah.php";
+                       }, 2000);
                                    </script>
 
 
