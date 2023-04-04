@@ -6,7 +6,8 @@ include '../../Action_front/koneksi.php';
 echo $_POST['id'];
 
 if (isset($_POST['edit'])) {
-    echo "edit";
+    $id = hash('md5',$_POST['id']);
+    header("Location:../editpetugas.php?id=$id");
 }
 
 
