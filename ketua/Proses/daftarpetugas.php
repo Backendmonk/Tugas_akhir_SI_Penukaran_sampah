@@ -2,7 +2,8 @@
 
 include '../../Action_front/koneksi.php';
 
-        $id = rand(9999,99999);
+        $idpetugas = rand(9999,99999);
+        $id = hash('md5',$idpetugas);
      $akses = "petugas";   
      $nama =  $_POST['nama'];
     $alamat =  $_POST['alamat'];
@@ -22,21 +23,26 @@ include '../../Action_front/koneksi.php';
 
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
         }elseif ($alamat=="") {
+            $statusdaftar = "gagal";
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
 
         }
         elseif ($email=="") {
+            $statusdaftar = "gagal";
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
 
         }
         elseif ($password=="") {
+            $statusdaftar = "gagal";
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
 
         }
         elseif ($nohp=="") {
+            $statusdaftar = "gagal";
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
 
         }elseif ($jeniskelamin=="") {
+            $statusdaftar = "gagal";
             header("Location:../tambahpetugas.php?statusdaftar=$statusdaftar");
 
         }else{

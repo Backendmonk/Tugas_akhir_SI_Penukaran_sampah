@@ -13,7 +13,6 @@
 
                 <?php
                        $id = $_GET['id'];
-                            echo $id;
                        $qselect = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE id_user = '$id'");
                ?>
 
