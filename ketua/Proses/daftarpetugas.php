@@ -2,8 +2,8 @@
 
 include '../../Action_front/koneksi.php';
 
-        $idpetugas = rand(9999,99999);
-        $id = hash('md5',$idpetugas);
+        $id = rand(9999,99999);
+        
      $akses = "petugas";   
      $nama =  $_POST['nama'];
     $alamat =  $_POST['alamat'];
