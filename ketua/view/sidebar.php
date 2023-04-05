@@ -11,8 +11,13 @@
 
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-check"></i></div>
-                                Approval Penukaran Sampah (nanti)
-                            </a>
+                                Approval Penukaran Sampah <span class="badge badge-pill badge-primary"><b style ="color:Red;">9</b></span> (nanti count dari table approval)
+                               
+
+                                
+                            </a> 
+ 
+                          
                             
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -25,26 +30,19 @@
                                     <a class="nav-link" href="user.php">Data User</a>
                                     <a class="nav-link" href="petugas.php
                                     ">Data Petugas</a>
+                                    <a class="nav-link" href="petugas.php
+                                    ">Rekap Penukaran Sampah</a>
+                                    <a class="nav-link" href="petugas.php
+                                    ">Database Sampah</a>
                                 </nav>
                             </div>
 
-                            
-
-                            
-                            <a class="nav-link" href="informasi.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
-                                Informasi 
-                            </a>
 
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-dollar"></i></div>
-                                Penukaran Sampah
+                               Data Stok
                             </a>
 
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-question"></i></div>
-                                Bantuan
-                            </a>
                         </div>
                     </div>
                 
