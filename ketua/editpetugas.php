@@ -13,7 +13,7 @@
 
                 <?php
                        $id = $_GET['id'];
-                       $qselect = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE id_user = '$id'");
+                       $qselect = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE id_petugas = '$id'");
                        $data = mysqli_fetch_array($qselect);
                ?>
 

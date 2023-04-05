@@ -108,7 +108,7 @@
                         <h2> Data user</h2>
                         <br>
                         <form action="tambahuser.php" method="post">
-                       
+                        <button type="submit" class="btn btn-outline-info">Tambah user</button>
                         </form>
                         
                         <br>
@@ -124,7 +124,7 @@
                                             <th>Jenis Kelamin</th>
                                             <th>No Telepon</th>
                                             <th>Hak Akses</th>
-                                           
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     
@@ -144,7 +144,17 @@
                                             <td><?php echo $data['no_telepon'] ?></td>
                                             <td><?php echo $data['hak_akses'] ?></td>
 
+                                            
+                                            <td>
+                                            <form action="proses/prosesaksiuser.php" Method ="POST">
 
+                                            <input type="text" hidden value ="<?php echo $data['id_user']  ?>" name ="id">    
+
+                                            <button type="submit" name = "edit" class="btn btn-primary">Edit</button> 
+                                            
+                                            <button type="submit" name ="hapus" class="btn btn-danger">Hapus</button>
+                                            </form>
+                                        </td>
                                            
                                         </tr>
 

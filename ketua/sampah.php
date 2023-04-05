@@ -18,14 +18,14 @@
                                   <script>
 
                                     swal({
-                                    title: "Berhasil Hapus Akun!",
-                                    text: "Akun Sudah Terhapus!",
+                                    title: "Berhasil Hapus Sampah!",
+                                    text: "Sampah Sudah Terhapus!",
                                     icon: "success"
                                    
                                     });
 
                                     setTimeout(function(){
-                        window.location="user.php";
+                        window.location="sampah.php";
                        }, 2000);
 
                                     </script>
@@ -38,13 +38,13 @@
                                   <script>
 
                                     swal({
-                                    title: "Gagal Hapus Akun!",
-                                    text: "Akun Gagal Terhapus!",
+                                    title: "Gagal Hapus Sampah!",
+                                    text: "Sampah Gagal Terhapus!",
                                     icon: "error"
 
                                     });
                                     setTimeout(function(){
-                                        window.location="user.php";
+                                        window.location="sampah.php";
                                     }, 2000);
                                     </script>
 
@@ -65,14 +65,14 @@
                                   <script>
 
                                     swal({
-                                    title: "Berhasil Edit Akun!",
-                                    text: "Akun Sudah Teredit!",
+                                    title: "Berhasil Edit Sampah!",
+                                    text: "Sampah Sudah Teredit!",
                                     icon: "success"
                                    
                                     });
 
                                     setTimeout(function(){
-                        window.location="user.php";
+                        window.location="sampah.php";
                        }, 2000);
 
                                     </script>
@@ -85,13 +85,13 @@
                                   <script>
 
                                     swal({
-                                    title: "Gagal Edit Akun!",
-                                    text: "Akun Gagal Teredit!",
+                                    title: "Gagal Edit Sampah!",
+                                    text: "Sampah Gagal Teredit!",
                                     icon: "error"
 
                                     });
                                     setTimeout(function(){
-                                        window.location="user.php";
+                                        window.location="sampah.php";
                                     }, 2000);
                                     </script>
 
@@ -105,10 +105,10 @@
 
                         <br>
                         <br>
-                        <h2> Data user</h2>
+                        <h2> Data sampah</h2>
                         <br>
-                        <form action="tambahuser.php" method="post">
-                       
+                        <form action="tambahsampah.php" method="post">
+                        <button type="submit" class="btn btn-outline-info">Tambah sampah</button>
                         </form>
                         
                         <br>
@@ -118,33 +118,35 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Alamat</th>
-                                            <th>Email</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>No Telepon</th>
-                                            <th>Hak Akses</th>
-                                           
+                                            <th>Nama Sampah</th>
+                                            <th>Jumlah Poin Per KG</th>
+                                            <th>Aksi</th>
+                                            
                                         </tr>
                                     </thead>
                                     
                                     <tbody>
 
                                     <?php
-                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE hak_akses = 'pengguna    '");
+                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_sampah` ");
 
                                             while ($data = mysqli_fetch_array($selectdata)) {
                                                 ?>
 
                                         <tr>
                                             <td><?php echo $data['nama'] ?></td>
-                                            <td><?php echo $data['alamat'] ?></td>
-                                            <td><?php echo $data['email'] ?></td>
-                                            <td><?php echo $data['jenis_kelamin'] ?></td>
-                                            <td><?php echo $data['no_telepon'] ?></td>
-                                            <td><?php echo $data['hak_akses'] ?></td>
+                                            <td><?php echo $data['jumlah_poin_per_kg'] ?></td>
+                                                                                        
+                                            <td>
+                                            <form action="proses/prosessampah.php" Method ="POST">
 
+                                            <input type="text" hidden value ="<?php echo $data['id_sampah']  ?>" name ="id">    
 
+                                            <button type="submit" name = "edit" class="btn btn-primary">Edit</button> 
+                                            
+                                            <button type="submit" name ="hapus" class="btn btn-danger">Hapus</button>
+                                            </form>
+                                        </td>
                                            
                                         </tr>
 
