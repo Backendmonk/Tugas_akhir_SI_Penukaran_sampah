@@ -31,8 +31,8 @@
                                     <a class="nav-link" href="petugas.php
                                     ">Data Petugas</a>
                                     <a class="nav-link" href="petugas.php
-                                    ">Rekap Penukaran Sampah</a>
-                                    <a class="nav-link" href="petugas.php
+                                    ">Rekap Penukaran Sampah(nanti)</a>
+                                    <a class="nav-link" href="DataSampah.php
                                     ">Database Sampah</a>
                                 </nav>
                             </div>
