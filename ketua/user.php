@@ -25,7 +25,7 @@
                                     });
 
                                     setTimeout(function(){
-                        window.location="petugas.php";
+                        window.location="user.php";
                        }, 2000);
 
                                     </script>
@@ -44,7 +44,7 @@
 
                                     });
                                     setTimeout(function(){
-                                        window.location="petugas.php";
+                                        window.location="user.php";
                                     }, 2000);
                                     </script>
 
@@ -72,7 +72,7 @@
                                     });
 
                                     setTimeout(function(){
-                        window.location="petugas.php";
+                        window.location="user.php";
                        }, 2000);
 
                                     </script>
@@ -91,7 +91,7 @@
 
                                     });
                                     setTimeout(function(){
-                                        window.location="petugas.php";
+                                        window.location="user.php";
                                     }, 2000);
                                     </script>
 
@@ -105,10 +105,10 @@
 
                         <br>
                         <br>
-                        <h2> Data Petugas</h2>
+                        <h2> Data user</h2>
                         <br>
-                        <form action="tambahpetugas.php" method="post">
-                        <button type="submit" class="btn btn-outline-info">Tambah Petugas</button>
+                        <form action="tambahuser.php" method="post">
+                        <button type="submit" class="btn btn-outline-info">Tambah user</button>
                         </form>
                         
                         <br>
@@ -131,7 +131,7 @@
                                     <tbody>
 
                                     <?php
-                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE hak_akses = 'petugas'");
+                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE hak_akses = 'pengguna    '");
 
                                             while ($data = mysqli_fetch_array($selectdata)) {
                                                 ?>
@@ -146,7 +146,7 @@
 
                                             
                                             <td>
-                                            <form action="proses/prosesaksi.php" Method ="POST">
+                                            <form action="proses/prosesaksiuser.php" Method ="POST">
 
                                             <input type="text" hidden value ="<?php echo $data['id_user']  ?>" name ="id">    
 

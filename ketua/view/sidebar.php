@@ -22,7 +22,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Data User</a>
+                                    <a class="nav-link" href="user.php">Data User</a>
                                     <a class="nav-link" href="petugas.php
                                     ">Data Petugas</a>
                                 </nav>

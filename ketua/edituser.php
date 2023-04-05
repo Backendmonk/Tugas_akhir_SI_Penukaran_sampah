@@ -7,7 +7,7 @@
             <div id="layoutSidenav_content">
             <div class="container-fluid px-4">
                 <main>
-                    <h3>Tambah Data Petugas</h3>
+                    <h3>Tambah Data user</h3>
 
                 <div class="row">
 
@@ -20,7 +20,7 @@
                  
                     <div class="card mb-4">
                     <div class="card-body">
-                    <form action = "Proses/editpetugas.php" method="POST">
+                    <form action = "Proses/edituser.php" method="POST">
                             <div class="form-row">
 
                             <div class="form-group col-md-6">
