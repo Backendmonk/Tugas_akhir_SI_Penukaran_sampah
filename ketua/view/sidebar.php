@@ -38,7 +38,7 @@
                             </div>
 
 
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="datastok.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-dollar"></i></div>
                                Data Stok
                             </a>
