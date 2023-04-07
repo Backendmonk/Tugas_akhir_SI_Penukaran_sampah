@@ -12,8 +12,8 @@
                 <br>
                 <br>
                 <form action="Proses/stokaksi.php" method="post">
-                        <button type="submit" name ="uang" class="btn btn-outline-info">Tambah Stok Berupa Uang</button>
-                        <button type="submit" name = "barang" class="btn btn-outline-info">Tambah Stok Berupa Barang</button>
+                        <button type="submit" name ="uang" class="btn btn-outline-info">Tambah Stok </button>
+                        
                         </form>
                
                         
@@ -43,7 +43,10 @@
                                                     
                                                     
                                                     ?>
-                                                    
+                                                    <form action="" method="post">
+                                                    <button type="submit" name ="uang" class="btn btn-warning">edit</button>
+
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
