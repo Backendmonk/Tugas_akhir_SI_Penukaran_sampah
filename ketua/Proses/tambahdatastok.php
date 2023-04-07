@@ -19,7 +19,7 @@ include '../../Action_front/koneksi.php';
             $statusdaftar = "gagal";
 
             header("Location:../tambahstok.php?statusdaftar=$statusdaftar");
-        }elseif ($stok_awal="") {
+        }elseif ($stok_awal=="") {
             $statusdaftar = "gagal";
             header("Location:../tambahstok.php?statusdaftar=$statusdaftar");
 
