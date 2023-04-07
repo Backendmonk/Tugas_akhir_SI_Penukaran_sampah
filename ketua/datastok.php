@@ -44,7 +44,8 @@
                                                     
                                                     ?>
                                                     <form action="" method="post">
-                                                    <button type="submit" name ="uang" class="btn btn-warning">edit</button>
+                                                    <button type="submit" name ="fubah" class="btn btn-warning">Edit</button>
+                                                    <button type="submit" name ="fhapus" class="btn btn-danger">Hapus</button>
 
                                                     </form>
                                                 </div>

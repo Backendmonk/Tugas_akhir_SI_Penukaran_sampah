@@ -4,7 +4,7 @@ include '../../Action_front/koneksi.php';
 
         $id = rand(9999,99999);
       
-     $nama =  $_POST['nama'];
+    $nama =  $_POST['nama'];
     $stok_awal = $_POST['stok_awal'];
     $satuan = $_POST['satuan'];
     $jenis_stok =$_POST['jenis'];
@@ -37,8 +37,8 @@ include '../../Action_front/koneksi.php';
        else{
                 $ceknama = mysqli_query($koneksi, "SELECT * FROM `tb_stok` WHERE `nama` = '$nama'");
                 $row = mysqli_num_rows($ceknama);
-                if ($row > 1) {
-                    $statusnama= "ada";
+                if ($row == 1) {
+                    $statusnama="ada";
                     header("Location:../tambahstok.php?statusnama=$statusnama");
                 }else{
                     
