@@ -8,6 +8,52 @@
             <div class="container-fluid px-4">
                 <main>
 
+                <?php
+
+
+                            if (isset($_GET['status'])) {
+                                                        
+                                $status = $_GET['status'];
+
+                                if ($status =="berhasil") {
+                                    ?>
+                                    <script>
+
+                                        swal({
+                                        title: "Berhasil ",
+                                        text: "Data Sudah Dihapus",
+                                        icon: "success",
+                                        button: "Oke !",
+                                        });
+
+                                        setTimeout(function(){
+                            window.location="datastok.php";
+                            }, 2000);
+                                        </script>
+
+
+                                    <?php
+                                }elseif ($status=="gagal") {
+                                    ?>
+                                    <script>
+
+                                        swal({
+                                        title: "Gagal ",
+                                        text: "Data Gagal Dihapus",
+                                        icon: "error",
+                                        button: "Oke !",
+                                        });
+
+                                        setTimeout(function(){
+                            window.location="datastok.php";
+                            }, 2000);
+                                        </script>
+
+
+                                    <?php
+                                }
+                            }
+                            ?>
                 <h3>Data Stok</h3>
                 <br>
                 <br>
@@ -43,7 +89,9 @@
                                                     
                                                     
                                                     ?>
-                                                    <form action="" method="post">
+                                                    <form action="Proses/stokaksi.php" method="post">
+
+                                                    <input type="text" name = "id" hidden value = "<?php echo $data['id_stok']?>">
                                                     <button type="submit" name ="fubah" class="btn btn-warning">Edit</button>
                                                     <button type="submit" name ="fhapus" class="btn btn-danger">Hapus</button>
 
