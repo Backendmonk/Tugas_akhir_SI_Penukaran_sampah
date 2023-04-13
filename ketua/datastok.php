@@ -53,6 +53,68 @@
                                     <?php
                                 }
                             }
+
+
+                            if (isset($_GET['status_edit'])) {
+                            
+                            $status_edit = $_GET['status_edit'];
+                            if ($status_edit == 'berhasil') {
+                                ?>
+                                <script>
+
+                                  swal({
+                                  title: "Berhasil Edit Stok!",
+                                  text: "Stok Berhasil Teredit!",
+                                  icon: "success"
+
+                                  });
+                                  setTimeout(function(){
+                                      window.location="datastok.php";
+                                  }, 2000);
+                                  </script>
+
+
+
+                          <?php
+                            }elseif ($status_edit == 'gagal') {
+                                ?>
+                                <script>
+
+                                  swal({
+                                  title: "Gagal Edit Stok!",
+                                  text: "Stok Gagal Teredit!",
+                                  icon: "error"
+
+                                  });
+                                  setTimeout(function(){
+                                      window.location="datasok.php";
+                                  }, 2000);
+                                  </script>
+
+
+
+                          <?php
+                            }elseif ($status_edit == 'namaada') {
+                                ?>
+                                <script>
+
+                                  swal({
+                                  title: "Nama Sudah Ada!",
+                                  text: "Stok Gagal Teredit!",
+                                  icon: "warning"
+
+                                  });
+                                  setTimeout(function(){
+                                      window.location="datastok.php";
+                                  }, 2000);
+                                  </script>
+
+
+
+                          <?php
+                            }
+                        }
+ 
                             ?>
                 <h3>Data Stok</h3>
                 <br>

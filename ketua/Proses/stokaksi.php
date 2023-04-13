@@ -24,7 +24,7 @@ if (isset($_POST['fhapus'])) {
 }
 
 
-if(isset($_POST['fedit'])){
+if(isset($_POST['fubah'])){
     $id = $_POST['id'];
 
     header("Location:../editstok.php?idstok=$id");
