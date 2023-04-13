@@ -1,3 +1,4 @@
+
 <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -11,7 +12,21 @@
 
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-check"></i></div>
-                                Approval Penukaran Sampah <span class="badge badge-pill badge-primary"><b style ="color:Red;">9</b></span> (nanti count dari table approval)
+                                Approval Penukaran Sampah <span class="badge badge-pill badge-primary"><b style ="color:Red;">
+                                <?php
+
+                                        $select = mysqli_query($koneksi,"SELECT COUNT(id_penukaran) as jml FROM tb_penukaran_sampah  WHERE `status_approval` = 'belum'");
+
+                                        $array = mysqli_fetch_array($select);
+
+                                        echo $array['jml'];
+
+
+                                    ?>
+                            
+                            
+                            
+                            </b></span> 
                                
 
                                 
