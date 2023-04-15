@@ -33,7 +33,7 @@
 
             
         
-                if ($arraylog['hak_akses']=='user') {
+                if ($arraylog['hak_akses']=='pengguna') {
 
                     $_SESSION['sesiuser']= $arraylog['id_user'];
                     $hak = "user";
