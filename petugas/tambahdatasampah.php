@@ -19,7 +19,7 @@
                  
                     <div class="card mb-4">
                     <div class="card-body">
-                    <form action = "Proses/edituser.php" method="POST">
+                    <form action = "Proses/tambahsampah.php" method="POST">
                             <div class="form-row">
 
                             <div class="form-group col-md-6">
@@ -31,13 +31,13 @@
                                 <!-- id-->
                                 <div class="form-group col-md-6">
                                 
-                                <input hidden type="email" value ="<?php echo $id ?> " name = "id" class="form-control" id="inputEmail4" placeholder="Email" >
+                                <input hidden type="text" value ="<?php echo $id ?> " name = "id" class="form-control" id="inputEmail4" placeholder="Email" >
                                 </div>                      
                             
                             
                                 <div class="form-group col-md-6">
                                 <label for="inputState">Jenis Kelamin</label>
-                                <select id="inputState" name = "jeniskelamin" class="form-control">
+                                <select id="inputState" name = "sampah" class="form-control">
                                     <option value = " " >--Pilih Sampah--</option>
 
                                     <?php
@@ -58,7 +58,7 @@
 
                                 <div class="form-group col-md-6">
                                 <label for="inputPassword4">Jumlah Sampah</label>
-                                <input type="number"  class="form-control" id="inputPassword4" placeholder="Jumlah Sampah" name = "jumlah" >
+                                <input type="number"  class="form-control" id="inputPassword4" placeholder="Jumlah Sampah" required name = "jumlah" >
                                 </div>
                             </div>
                                 <br>

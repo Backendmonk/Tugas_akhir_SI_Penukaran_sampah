@@ -42,9 +42,21 @@
                                                 <div class="card-body"><?php  echo $data['nama'];   ?></div>
                                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                                 
-                                                    <?php  
-                                                    
-                                                    echo "Jumlah Sampah : ";
+                                                    <?php
+                                                      
+                                                    //echo $data['id_sampah'];
+
+                                                    $qselectjumlah = mysqli_query($koneksi,"SELECT * FROM tb_sampah_user WHERE `id_sampah` = '$data[id_sampah]' AND id_user = '$id'");
+                                                    $jml = mysqli_fetch_array($qselectjumlah);
+                                                    $rowjml = mysqli_num_rows($qselectjumlah);
+
+                                                    if ($rowjml > 0) {
+                                                        
+                                                        $jumlah = $jml['jumlah_sampah'];
+                                                    }else{
+                                                        $jumlah = '0';
+                                                    }
+                                                    echo "Jumlah Sampah : ".$jumlah;
                                                 
                                                     ?>
                                                    
