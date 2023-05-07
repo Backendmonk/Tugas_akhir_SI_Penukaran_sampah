@@ -7,7 +7,7 @@
             <div id="layoutSidenav_content">
             <div class="container-fluid px-4">
                 <main>
-                    <h3>Tambah Data stok</h3>
+                    <h3>Edit Data stok</h3>
 
                 <div class="row">
 

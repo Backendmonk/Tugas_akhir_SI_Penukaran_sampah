@@ -119,11 +119,11 @@
                 <h3>Data Stok</h3>
                 <br>
                 <br>
-                <form action="Proses/stokaksi.php" method="post">
+                <!-- <form action="Proses/stokaksi.php" method="post">
                         <button type="submit" name ="uang" class="btn btn-outline-info">Tambah Stok </button>
                         
                         </form>
-               
+                -->
                         
                 <br>
                 <br>
@@ -151,13 +151,13 @@
                                                     
                                                     
                                                     ?>
-                                                    <form action="Proses/stokaksi.php" method="post">
+                                                    <!-- <form action="Proses/stokaksi.php" method="post">
 
                                                     <input type="text" name = "id" hidden value = "<?php echo $data['id_stok']?>">
                                                     <button type="submit" name ="fubah" class="btn btn-warning">Edit</button>
                                                     <button type="submit" name ="fhapus" class="btn btn-danger">Hapus</button>
 
-                                                    </form>
+                                                    </form> -->
                                                 </div>
                                             </div>
                                         </div>

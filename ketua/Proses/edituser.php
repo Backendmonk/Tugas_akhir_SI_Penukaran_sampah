@@ -6,7 +6,7 @@ $id = $_POST['id'];
 $nama =  $_POST['nama'];
 $alamat =  $_POST['alamat'];
 $email = $_POST['email'];
-$password =  $_POST['password'];    
+$password =  $_POST['password'];
 $nohp =  $_POST['nohp'];
 $jeniskelamin =  $_POST['jeniskelamin'];
 
@@ -15,15 +15,15 @@ if (isset($_POST['fdaftar'])) {
 
     if ($qupdate) {
         $edit  = "berhasil";
-        header("Location:../petugas.php?edit=$edit");
+        header("Location:../user.php?edit=$edit");
     }else{
         $edit  = "gagal";
-        header("Location:../petugas.php?edit=$edit");
+        header("Location:../user.php?edit=$edit");
     }
 }
 
 if (isset($_POST['fclose'])) {
-    header("Location:../petugas.php");
+    header("Location:../user.php");
 }
 
 
