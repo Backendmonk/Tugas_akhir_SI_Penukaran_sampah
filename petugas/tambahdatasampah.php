@@ -58,7 +58,7 @@
 
                                 <div class="form-group col-md-6">
                                 <label for="inputPassword4">Jumlah Sampah</label>
-                                <input type="number"  class="form-control" id="inputPassword4" placeholder="Jumlah Sampah" required name = "jumlah" >
+                                <input type="number"  class="form-control" id="inputPassword4" placeholder="Jumlah Sampah"  name = "jumlah" >
                                 </div>
                             </div>
                                 <br>

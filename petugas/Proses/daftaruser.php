@@ -51,6 +51,7 @@ include '../../Action_front/koneksi.php';
 
                     if ($qdaftar) {
                         $statusdaftar = "berhasil";
+                        $qinputto_poinNa = mysqli_query($koneksi,"INSERT INTO `tb_poin`(`id_user`, `akumulasi_poin`) VALUES ('$id','0')");
 
                         header("Location:../tambahuser.php?statusdaftar=$statusdaftar");
                     }else{
