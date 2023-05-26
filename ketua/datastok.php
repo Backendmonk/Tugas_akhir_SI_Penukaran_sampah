@@ -154,7 +154,7 @@
                                                     <form action="Proses/stokaksi.php" method="post">
 
                                                     <input type="text" name = "id" hidden value = "<?php echo $data['id_stok']?>">
-                                                    <button type="submit" name ="fubah" class="btn btn-warning">Edit</button>
+                                                    <button type="submit" name ="fubah" class="btn btn-warning">Tambah Stok</button>
                                                     
 
                                                     </form>

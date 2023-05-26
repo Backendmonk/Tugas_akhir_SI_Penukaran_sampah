@@ -10,22 +10,22 @@
                 <main>
                 <!--   Alert Hapus Data -->
                 <?php
-                        if (isset($_GET['Status'])) {
-                            $status = $_GET['Status'];
+                        if (isset($_GET['status'])) {
+                            $status = $_GET['status'];
 
-                            if ($status=="Done") {
+                            if ($status=="berhasil") {
                                  ?>
                                   <script>
 
                                     swal({
-                                    title: "Berhasil Hapus Akun!",
-                                    text: "Akun Sudah Terhapus!",
+                                    title: "Berhasil!",
+                                    text: "Data Ditambah!",
                                     icon: "success"
                                    
                                     });
 
                                     setTimeout(function(){
-                        window.location="user.php";
+                        window.location="datasampah.php";
                        }, 2000);
 
                                     </script>
@@ -33,18 +33,18 @@
 
 
                             <?php
-                            }elseif ($status=="Gagal") {
+                            }elseif ($status=="gagal") {
                                 ?>
                                   <script>
 
                                     swal({
-                                    title: "Gagal Hapus Akun!",
-                                    text: "Akun Gagal Terhapus!",
+                                    title: "Gagal",
+                                    text: "Data Gagal Ditambah!",
                                     icon: "error"
 
                                     });
                                     setTimeout(function(){
-                                        window.location="user.php";
+                                        window.location="datasampah.php";
                                     }, 2000);
                                     </script>
 
@@ -54,52 +54,7 @@
                             }
                         }
 
-                        //alert edit data
-
-
-                        if (isset($_GET['edit'])) {
-                            $edit = $_GET['edit'];
-
-                            if ($edit=="berhasil") {
-                                 ?>
-                                  <script>
-
-                                    swal({
-                                    title: "Berhasil Edit Akun!",
-                                    text: "Akun Sudah Teredit!",
-                                    icon: "success"
-                                   
-                                    });
-
-                                    setTimeout(function(){
-                        window.location="user.php";
-                       }, 2000);
-
-                                    </script>
-
-
-
-                            <?php
-                            }elseif ($edit=="gagal") {
-                                ?>
-                                  <script>
-
-                                    swal({
-                                    title: "Gagal Edit Akun!",
-                                    text: "Akun Gagal Teredit!",
-                                    icon: "error"
-
-                                    });
-                                    setTimeout(function(){
-                                        window.location="user.php";
-                                    }, 2000);
-                                    </script>
-
-
-
-                            <?php
-                            }
-                        }
+                        
                 ?>
                
 
@@ -116,6 +71,7 @@
                                     <thead>
                                         <tr>
                                             <th>Name</th>
+                                            <th>Poin</th>
                                             
                                             <th>Aksi</th>
                                         </tr>
@@ -124,13 +80,14 @@
                                     <tbody>
 
                                     <?php
-                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE hak_akses = 'pengguna    '");
+                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM `tb_user`inner join tb_poin ON tb_poin.id_user = tb_user.id_user  WHERE hak_akses = 'pengguna    '");
 
                                             while ($data = mysqli_fetch_array($selectdata)) {
                                                 ?>
 
                                         <tr>
                                             <td><?php echo $data['nama'] ?></td>
+                                            <td><?php echo $data['akumulasi_poin'] ?></td>
                                                                                         
                                             <td>
                                             <form action="detailsampah.php" Method ="POST">

@@ -24,11 +24,16 @@ if (isset($_POST['fedit'])) {
     $row = mysqli_num_rows($ceknama);
 
     $id_form = $id;
+
+    $qselectstok = mysqli_query($koneksi,"SELECT jumlah_stok from tb_stok WHERE `nama` = '$nama'");
+    $uang  = mysqli_fetch_array($qselectstok);
+
+    $totaluang = $stok_awal + $uang['jumlah_stok'];
     
 
     if ($id_form == $arraydata['id_stok'] ) {
 
-        $update = mysqli_query($koneksi,"UPDATE `tb_stok` SET `nama`='$nama',`jumlah_stok`='$stok_awal',`satuan`='$satuan',`jenis_stok`='$jenis_stok' WHERE `id_stok` = '$id_form'");
+        $update = mysqli_query($koneksi,"UPDATE `tb_stok` SET `nama`='$nama',`jumlah_stok`='$totaluang',`satuan`='$satuan',`jenis_stok`='$jenis_stok' WHERE `id_stok` = '$id_form'");
         
 
         if ($update) {

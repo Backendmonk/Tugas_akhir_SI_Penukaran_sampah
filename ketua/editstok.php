@@ -42,8 +42,8 @@
 
                                 <div class="form-row">
                                 <div class="form-group col-md-6">
-                                <label for="inputCity">Jumlah Stok Awal</label>
-                                <input type="text"  name = "stok_awal" placeholder="Poin" class="form-control" id="inputCity" value = <?php echo $data['jumlah_stok'];  ?>>
+                                <label for="inputCity">Jumlah Uang</label>
+                                <input type="text"  name = "stok_awal" placeholder="Poin" class="form-control" id="inputCity" >
                                 </div>
 
                                 <div class="form-row">
@@ -71,7 +71,7 @@
                             
 
 
-                            <button type="submit" name="fedit" class="btn btn-primary">Daftar</button>
+                            <button type="submit" name="fedit" class="btn btn-primary">Tambah</button>
                             <button type="submit" name ="fclose" class="btn btn-danger">Kembali</button>
                             </form>
                     <div>   

@@ -46,7 +46,7 @@
                                 Laporan Keuangan
                             </a>
 
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="totalsampah.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-trash"></i></div>
                                 Laporan Sampah
                             </a>
