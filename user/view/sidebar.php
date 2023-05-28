@@ -24,7 +24,7 @@
                                 Penukaran Sampah
                             </a>
 
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="https://www.facebook.com/groups/644514196972830/?ref=share&mibextid=KtfwRi ">
                                 <div class="sb-nav-link-icon"><i class="fas fa-question"></i></div>
                                 Bantuan
                             </a>

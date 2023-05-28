@@ -7,9 +7,13 @@
             <div id="layoutSidenav_content">
             <div class="container-fluid px-4">
                 <main>
-                <br>
+                
             <br>    
                 <div class="row">
+                    <center><h5>Selamat datang di sistem penukaran sampah masa kini<br> menuju lingkungan yang bersih dan asri</h5></center>
+                    <br>
+                    <br>
+                    <br>
                            <?php
 
                                 $qselectdata = mysqli_query($koneksi,"SELECT * FROM tb_sampah");
@@ -58,13 +62,22 @@
                    
                     <div>               
                     <center>
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="asset/1 (1).jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="asset/2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="asset/3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
                         
-
-                    <video width="500" height="500" controls>
-                        <source src="asset/video.mp4" type="video/mp4">
-                        </video>
-
-                        <h5>Selamat datang di sistem penukaran sampah masa kini<br> menuju lingkungan yang bersih dan asri</h5>
                     </center>
 
                         <br>

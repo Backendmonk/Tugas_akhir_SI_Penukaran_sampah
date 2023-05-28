@@ -66,6 +66,8 @@
                                     <thead>
                                         <tr>
                                             <th>Id Penukaran</th>
+                                            <th>Nama</th>
+                                            <th>Jenis Pembayaran</th>
                                             <th>Jumlah Redem</th>
                                             <th>Pengajuan Uang</th>
                                             <th>Status</th>
@@ -76,13 +78,17 @@
                                     <tbody>
 
                                     <?php
-                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM tb_penukaran_sampah ");
+                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM tb_penukaran_sampah inner join tb_user on tb_penukaran_sampah.id_user = tb_user.id_user ");
 
                                             while ($data = mysqli_fetch_array($selectdata)) {
                                                 ?>
 
                                         <tr>
                                             <td><?php echo $data['id_penukaran'] ?></td>
+                                            <td><?php echo $data['nama'] ?></td>
+                                            <td><?php echo $data['jenis_emoney'] ?></td>
+                                            
+                                            
                                             <td><?php echo $data['jml_redem'] ?></td>
                                             <td><?php echo "Rp"." .".$data['jumlah_uang'] ?></td>
                                                                                         
@@ -90,7 +96,7 @@
 
                                                 if ($data['status_approval']=='Belum') {
                                                     ?>
-                                                   <button type="button" class="btn btn-danger">Approve Pengajuan</button>
+                                                   <button type="button" class="btn btn-danger">Pending</button>
                                                     
                                                    
 

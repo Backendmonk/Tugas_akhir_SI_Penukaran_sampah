@@ -65,7 +65,9 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Id Penukaran</th>
+                                        <th>Id Penukaran</th>
+                                            <th>Nama</th>
+                                            <th>Jenis Pembayaran</th>
                                             <th>Jumlah Redem</th>
                                             <th>Pengajuan Uang</th>
                                             <th>Status</th>
@@ -76,37 +78,52 @@
                                     <tbody>
 
                                     <?php
-                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM tb_penukaran_sampah WHERE status_approval = 'Belum'");
+                                            $selectdata = mysqli_query($koneksi,"SELECT * FROM tb_penukaran_sampah inner join tb_user on tb_penukaran_sampah.id_user = tb_user.id_user WHERE status_approval = 'Belum'");
 
                                             while ($data = mysqli_fetch_array($selectdata)) {
                                                 ?>
 
                                         <tr>
-                                            <td><?php echo $data['id_penukaran'] ?></td>
+                                        <td><?php echo $data['id_penukaran'] ?></td>
+                                            <td><?php echo $data['nama'] ?></td>
+                                            <td><?php echo $data['jenis_emoney'] ?></td>
+                                            
+                                            
                                             <td><?php echo $data['jml_redem'] ?></td>
                                             <td><?php echo "Rp"." .".$data['jumlah_uang'] ?></td>
                                                                                         
                                             <td><?php 
-
-                                                if ($data['status_approval']=='Belum') {
+                                                  $selectuang = mysqli_query($koneksi,"SELECT * FROM tb_stok");
+                                                  $jmluang = mysqli_fetch_array($selectuang);
+                                                  if ($jmluang['jumlah_stok'] < 10000) {
                                                     ?>
-                                                    <form action="Proses/prosesApprove.php" method="post">
-                                                        <input type="text" value = "<?php echo $data['id_penukaran']?>" hidden  name ="id">
-                                                        <input type="text" value = "<?php echo $data['id_user']?>" hidden  name ="user">
-                                                        <input type="text" value = "<?php echo $data['jml_redem']?>" hidden  name ="poin">
-                                                        
-                                                        
-
-
-                                                    <button type="submit" name="approve" class="btn btn-danger">Approve Pengajuan</button>
-                                                    </form>
-                                                   
+                                                        <?php echo "Stok Uang Sedikit" ?>
 
                                                     <?php
-                                                }elseif ($data['status_approval']=='Approved') {
+                                                  }else{
 
-                                                    echo "Approved";
-                                                }
+                                                    if ($data['status_approval']=='Belum') {
+                                                        ?>
+                                                        <form action="Proses/prosesApprove.php" method="post">
+                                                            <input type="text" value = "<?php echo $data['id_penukaran']?>" hidden  name ="id">
+                                                            <input type="text" value = "<?php echo $data['id_user']?>" hidden  name ="user">
+                                                            <input type="text" value = "<?php echo $data['jml_redem']?>" hidden  name ="poin">
+                                                            <input type="text" value = "<?php echo $data['jumlah_uang']?>" hidden  name ="uang">
+                                                            
+                                                            
+    
+    
+                                                        <button type="submit" name="approve" class="btn btn-danger">Approve Pengajuan</button>
+                                                        </form>
+                                                       
+    
+                                                        <?php
+                                                    }elseif ($data['status_approval']=='Approved') {
+    
+                                                        echo "Approved";
+                                                    }
+                                                  }
+                                               
                                               
                                             
                                             ?> </td>

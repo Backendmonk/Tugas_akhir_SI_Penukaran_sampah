@@ -120,7 +120,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 order-md-2">
-          <img src="login_asset/images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+          <img src="login_asset/images/bg.png" alt="Image" class="img-fluid">
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
