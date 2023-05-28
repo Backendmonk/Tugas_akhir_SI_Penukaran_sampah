@@ -10,7 +10,7 @@
                                 Dashboard
                             </a>
 
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="aproval.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-check"></i></div>
                                 Approval Penukaran Sampah <span class="badge badge-pill badge-primary"><b style ="color:Red;">
                                 <?php
@@ -45,8 +45,8 @@
                                     <a class="nav-link" href="user.php">Data User</a>
                                     <a class="nav-link" href="petugas.php
                                     ">Data Petugas</a>
-                                    <a class="nav-link" href="petugas.php
-                                    ">Rekap Penukaran Sampah(nanti)</a>
+                                    <a class="nav-link" href="rekapapproval.php
+                                    ">Rekap Penukaran Sampah</a>
                                     <a class="nav-link" href="sampah.php
                                     ">Database Sampah</a>
                                 </nav>

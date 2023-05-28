@@ -19,11 +19,11 @@
         
         
 
-        if (!$koneksi) {
-           echo "gagal"; 
-        }else{
-            echo "berhasil";
-        }
+        // if (!$koneksi) {
+        //    echo "gagal"; 
+        // }else{
+        //     echo "berhasil";
+        // }
 
 
 

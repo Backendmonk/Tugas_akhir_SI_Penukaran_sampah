@@ -32,7 +32,15 @@
                                                 
                                                     <?php  
                                                     
-                                                    
+                                                    $selectsampahuser= mysqli_query($koneksi,"SELECT * From tb_sampah_user WHERE id_sampah ='$data[id_sampah]'");
+
+                                                    $total = 0;
+                                                    while ( $datasampah = mysqli_fetch_array($selectsampahuser)) {
+                                                        $total = $datasampah['jumlah_sampah']+$total ;
+                                                    }
+                                                    echo $total;
+                                                   
+                                                   
                                                     
                                                     ?>
                                                    
