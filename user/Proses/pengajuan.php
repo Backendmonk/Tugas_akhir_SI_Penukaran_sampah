@@ -26,7 +26,7 @@ if (isset($_POST['fdaftar'])) {
         }
         else{
             $jumlahUang = $poin * 1000;
-           $qinsert = mysqli_query($koneksi,"INSERT INTO `tb_penukaran_sampah`(`id_penukaran`, `id_user`, `jenis_emoney`, `jml_redem`, `jumlah_uang`, `status_approval`) VALUES ('$idpenukaran','$id','$jenis','$poin','$jumlahUang','$status')"); 
+           $qinsert = mysqli_query($koneksi,"INSERT INTO `tb_penukaran_sampah`(`id_penukaran`, `id_user`, `jenis_emoney`, `nomer`,`jml_redem`, `jumlah_uang`, `status_approval`) VALUES ('$idpenukaran','$id','$jenis','$money','$poin','$jumlahUang','$status')"); 
            if ($qinsert) {
             
             $status = "berhasil";

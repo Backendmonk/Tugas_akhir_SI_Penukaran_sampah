@@ -6,6 +6,8 @@ $id = $_POST['id'];
 $user = $_POST['user'];
 $poin = $_POST['poin'];
 $uang = $_POST['uang'];
+$cashid = rand(44,9883);
+$date = date('Y-m-d');
 if (isset($_POST['approve'])) {
     
     $query = mysqli_query($koneksi,"UPDATE `tb_penukaran_sampah` SET `status_approval`='Approved' WHERE `id_penukaran` = '$id'");
@@ -23,6 +25,8 @@ if (isset($_POST['approve'])) {
         $updatepenguranganPoin = mysqli_query($koneksi,"UPDATE `tb_poin` SET `akumulasi_poin`='$totalpoin' WHERE id_user = '$user'");
         $totaluang = $jmluang['jumlah_stok'] - $uang;
         $updatejmluang = mysqli_query($koneksi,"UPDATE `tb_stok` SET `jumlah_stok`='$totaluang'");
+
+        $cashflowadd = mysqli_query($koneksi,"INSERT INTO `cash_flow`(`id_flow`, `Jumlah_uang_keluar`, `id_penukaran`, `tanggal`) VALUES ('$cashid','$uang','$id','$date')");
 
         $status  = "berhasil";
         header("Location:../aproval.php?status=$status");

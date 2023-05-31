@@ -68,6 +68,7 @@
                                             <th>Id Penukaran</th>
                                             <th>Nama</th>
                                             <th>Jenis Pembayaran</th>
+                                            <th>Nomer E Money</th>
                                             <th>Jumlah Redem</th>
                                             <th>Pengajuan Uang</th>
                                             <th>Status</th>
@@ -87,6 +88,8 @@
                                             <td><?php echo $data['id_penukaran'] ?></td>
                                             <td><?php echo $data['nama'] ?></td>
                                             <td><?php echo $data['jenis_emoney'] ?></td>
+
+                                            <td><?php echo $data['nomer'] ?></td>
                                             
                                             
                                             <td><?php echo $data['jml_redem'] ?></td>

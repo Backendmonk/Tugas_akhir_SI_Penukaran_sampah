@@ -11,14 +11,62 @@
 
                 <div class="row">
 
-                <?php
+               
+
+<?php
+                        if (isset($_GET['statusdaftar'])) {
+                            if (isset($_GET['id'])) {
+                                $status = $_GET['statusdaftar'];
+                            
+                                if ($status =="berhasil") {
+                                    ?>
+                                     <script>
+    
+                                        swal({
+                                        title: "Berhasil ",
+                                        text: "Data Sudah Ditambah",
+                                        icon: "success",
+                                        button: "Oke !",
+                                        });
+    
+                                       
+                                        </script>
+    
+    
+                                    <?php
+                                }elseif ($status == "gagal") {
+                                        $id = $_GET['id'];
+                                    ?>
+                                    <script>
+    
+                                       swal({
+                                       title: "GAGAL ",
+                                       text: "Data Tidak Boleh Kosong",
+                                       icon: "error",
+                                       button: "Oke !",
+                                       });
+    
+                                       setTimeout(function(){
+                            window.location="editpetugas.php?id="+$id;
+                           }, 2000);
+                                       </script>
+    
+    
+                                   <?php
+                                }
+                            }
+                            }
+                            
+                           
+               ?>
+
+
+                  <?php
                        $id = $_GET['id'];
                        
                        $qselect = mysqli_query($koneksi,"SELECT * FROM `tb_user` WHERE id_user = '$id'");
                        $data = mysqli_fetch_array($qselect);
                ?>
-
-                 
                     <div class="card mb-4">
                     <div class="card-body">
                     <form action = "Proses/editpetugas.php" method="POST">

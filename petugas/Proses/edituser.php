@@ -11,16 +11,48 @@ $nohp =  $_POST['nohp'];
 $jeniskelamin =  $_POST['jeniskelamin'];
 
 if (isset($_POST['fdaftar'])) {
-    $qupdate = mysqli_query($koneksi,"UPDATE `tb_user` SET `nama`='$nama',`alamat`='$alamat',`email`='$email',`jenis_kelamin`='$jeniskelamin',`no_telepon`='$nohp',`password`='$password' WHERE `id_user` = '$id'");
 
-    if ($qupdate) {
-        $edit  = "berhasil";
-        header("Location:../user.php?edit=$edit");
-    }else{
-        $edit  = "gagal";
-        header("Location:../user.php?edit=$edit");
+
+    if ($nama =="") {
+        $statusdaftar = "gagal";
+
+        header("Location:../edituser.php?statusdaftar=$statusdaftar&id=$id");
+    }elseif ($alamat=="") {
+        $statusdaftar = "gagal";
+        header("Location:../edituser.php?statusdaftar=$statusdaftar&id=$id");
+
     }
-}
+    elseif ($email=="") {
+        $statusdaftar = "gagal";
+        header("Location:../edituser.php?statusdaftar=$statusdaftar&id=$id");
+
+    }
+    elseif ($password=="") {
+        $statusdaftar = "gagal";
+        header("Location:../edituser.php?statusdaftar=$statusdaftar&id=$id");
+
+    }
+    elseif ($nohp=="") {
+        $statusdaftar = "gagal";
+        header("Location:../edituser.php?statusdaftar=$statusdaftar&id=$id");
+
+    }elseif ($jeniskelamin=="") {
+        $statusdaftar = "gagal";
+        header("Location:../edituser.php?statusdaftar=$statusdaftar&id=$id");
+    }else{
+
+        $qupdate = mysqli_query($koneksi,"UPDATE `tb_user` SET `nama`='$nama',`alamat`='$alamat',`email`='$email',`jenis_kelamin`='$jeniskelamin',`no_telepon`='$nohp',`password`='$password' WHERE `id_user` = '$id'");
+
+        if ($qupdate) {
+            $edit  = "berhasil";
+            header("Location:../user.php?edit=$edit");
+        }else{
+            $edit  = "gagal";
+            header("Location:../user.php?edit=$edit");
+        }
+    }
+    }
+   
 
 if (isset($_POST['fclose'])) {
     header("Location:../user.php");

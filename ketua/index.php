@@ -56,7 +56,7 @@
 
                         <br>
                         <br>
-                        <h2>Rekap Sampah Anda</h2>
+                        <h2>Rekap Sampah</h2>
                         <div class="card mb-4">
                     <div class="card-body">
                                 <table id="datatablesSimple">

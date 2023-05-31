@@ -4,7 +4,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Halaman Utama
                             </a>
@@ -41,7 +41,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Pengajuan Penukaran Sampah
                             </a> -->
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="keuangan.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-dollar"></i></div>
                                 Laporan Keuangan
                             </a>

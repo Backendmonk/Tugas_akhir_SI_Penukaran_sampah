@@ -7,9 +7,57 @@
             <div id="layoutSidenav_content">
             <div class="container-fluid px-4">
                 <main>
-                    <h3>Tambah Data user</h3>
+                    <h3>Edit Data user</h3>
 
                 <div class="row">
+
+                <?php
+
+                if (isset($_GET['statusdaftar'])) {
+                            if (isset($_GET['id'])) {
+                                $status = $_GET['statusdaftar'];
+                            
+                                if ($status =="berhasil") {
+                                    ?>
+                                     <script>
+    
+                                        swal({
+                                        title: "Berhasil ",
+                                        text: "Data Sudah Ditambah",
+                                        icon: "success",
+                                        button: "Oke !",
+                                        });
+    
+                                       
+                                        </script>
+    
+    
+                                    <?php
+                                }elseif ($status == "gagal") {
+                                        $id = $_GET['id'];
+                                    ?>
+                                    <script>
+    
+                                       swal({
+                                       title: "GAGAL ",
+                                       text: "Data Tidak Boleh Kosong",
+                                       icon: "error",
+                                       button: "Oke !",
+                                       });
+    
+                                       setTimeout(function(){
+                            window.location="edituser.php?id="+$id;
+                           }, 2000);
+                                       </script>
+    
+    
+                                   <?php
+                                }
+                            }
+                            }
+                            
+                           
+               ?>
 
                 <?php
                        $id = $_GET['id'];
