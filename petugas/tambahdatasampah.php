@@ -36,7 +36,7 @@
                             
                             
                                 <div class="form-group col-md-6">
-                                <label for="inputState">Jenis Kelamin</label>
+                                <label for="inputState">Jenis Sampah</label>
                                 <select id="inputState" name = "sampah" class="form-control">
                                     <option value = " " >--Pilih Sampah--</option>
 

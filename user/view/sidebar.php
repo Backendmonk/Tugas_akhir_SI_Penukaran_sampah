@@ -21,7 +21,7 @@
 
                             <a class="nav-link" href="penukaran-sampah.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-dollar"></i></div>
-                                Penukaran Sampah
+                                Penukaran Poin
                             </a>
 
                             <a class="nav-link" href="https://www.facebook.com/groups/644514196972830/?ref=share&mibextid=KtfwRi ">

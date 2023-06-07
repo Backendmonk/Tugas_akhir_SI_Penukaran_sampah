@@ -8,13 +8,72 @@
             <div class="container-fluid px-4">
                 <main>
 
+                <?php
+
+if (isset($_GET['status'])) {
+            if (isset($_GET['id'])) {
+                $status = $_GET['status'];
+            
+                if ($status =="berhasil") {
+                    ?>
+                     <script>
+
+                        swal({
+                        title: "Berhasil ",
+                        text: "Data Sudah Ditambah",
+                        icon: "success",
+                        button: "Oke !",
+                        });
+
+                       
+                        </script>
+
+
+                    <?php
+                }elseif ($status == "gagal") {
+                        $id = $_GET['id'];
+                    ?>
+                    <script>
+
+                       swal({
+                       title: "GAGAL ",
+                       text: "Data Tidak Boleh Kosong",
+                       icon: "error",
+                       button: "Oke !",
+                       });
+
+                       setTimeout(function(){
+                        window.location="detailsampah.php?id="+$id;
+                    }, 2000);
+                       </script>
+
+
+                   <?php
+                }
+            }
+            }
+            
+           
+?>
+                
+
               
                 <h3>Data Sampah</h3>
                 <br>
                 <br>
                     <?php
 
-                    $id = $_POST['id'];
+                  
+                    if (isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                    }else{
+
+                        $id = $_POST['id'];
+
+
+                    }
+
+
                     
                     ?>
 
