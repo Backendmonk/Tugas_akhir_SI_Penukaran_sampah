@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2023 at 08:45 PM
+-- Generation Time: Jul 03, 2023 at 06:09 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -42,8 +42,7 @@ CREATE TABLE `cash_flow` (
 --
 
 INSERT INTO `cash_flow` (`id_flow`, `Jumlah_uang_keluar`, `id_penukaran`, `tanggal`) VALUES
-('144', '36000', '96760', '2023-05-31'),
-('4711', '90000', '79759', '2023-05-31');
+('5538', '32000', '6285', '2023-07-02');
 
 -- --------------------------------------------------------
 
@@ -59,21 +58,16 @@ CREATE TABLE `tb_penukaran_sampah` (
   `nomer` varchar(100) NOT NULL,
   `jml_redem` varchar(100) NOT NULL,
   `jumlah_uang` varchar(100) NOT NULL,
-  `status_approval` varchar(100) NOT NULL
+  `status_approval` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_penukaran_sampah`
 --
 
-INSERT INTO `tb_penukaran_sampah` (`id_penukaran`, `id_user`, `jenis_emoney`, `nomer`, `jml_redem`, `jumlah_uang`, `status_approval`) VALUES
-('45161', '96105 ', 'ShopeePay', '', '10', '10000', 'Approved'),
-('51413', '96105 ', 'ShopeePay', '', '40', '40000', 'Approved'),
-('62896', '96105 ', 'Gopay', '', '23', '23000', 'Approved'),
-('65301', '96105 ', 'ShopeePay', '', '120', '120000', 'Approved'),
-('74359', '96105 ', 'Gopay', '', '100', '100000', 'Approved'),
-('79759', '96105 ', 'ShopeePay', '', '90', '90000', 'Approved'),
-('96760', '96105 ', 'Gopay', '2213908', '36', '36000', 'Approved');
+INSERT INTO `tb_penukaran_sampah` (`id_penukaran`, `id_user`, `jenis_emoney`, `nomer`, `jml_redem`, `jumlah_uang`, `status_approval`, `tanggal`) VALUES
+('6285', '13302 ', 'Gopay', '21432', '32', '32000', 'Approved', '2023-07-02');
 
 -- --------------------------------------------------------
 
@@ -92,10 +86,8 @@ CREATE TABLE `tb_poin` (
 --
 
 INSERT INTO `tb_poin` (`id_user`, `akumulasi_poin`) VALUES
-('96105                 ', '0'),
-('76216 ', '800'),
-('34077  ', '408'),
-('51411', '0');
+('13302 ', '3968'),
+('72823', '0');
 
 -- --------------------------------------------------------
 
@@ -117,15 +109,7 @@ CREATE TABLE `tb_rekap_sampah` (
 --
 
 INSERT INTO `tb_rekap_sampah` (`id`, `id_sampah`, `id_user`, `jumlah_Kg`, `tanggal_masuk`) VALUES
-('1188', '10365', '96105         ', '2', '2023-05-26'),
-('3234', '59988', '96105           ', '30', '2023-05-26'),
-('3307', '10365', '96105          ', '10', '2023-05-26'),
-('4626', '88033', '96105                 ', '43', '2023-05-27'),
-('69', '84547', '34077  ', '200', '2023-05-27'),
-('736', '10365', '96105            ', '13', '2023-05-27'),
-('7720', '10365', '96105                ', '1', '2023-05-27'),
-('7780', '10365', '34077 ', '2', '2023-05-27'),
-('8630', '59988', '96105               ', '3', '2023-05-27');
+('8569', '59988', '13302 ', '1000', '2023-07-02');
 
 -- --------------------------------------------------------
 
@@ -168,13 +152,7 @@ CREATE TABLE `tb_sampah_user` (
 --
 
 INSERT INTO `tb_sampah_user` (`id_user`, `id_sampah`, `jumlah_sampah`) VALUES
-('96105         ', '10365', '27'),
-('96105           ', '59988', '30'),
-('76216 ', '10365', '200'),
-('96105             ', '84547', '3'),
-('34077 ', '10365', '2'),
-('34077  ', '84547', '200'),
-('96105                 ', '88033', '43');
+('13302 ', '59988', '1000');
 
 -- --------------------------------------------------------
 
@@ -196,7 +174,7 @@ CREATE TABLE `tb_stok` (
 --
 
 INSERT INTO `tb_stok` (`id_stok`, `nama`, `jumlah_stok`, `satuan`, `jenis_stok`) VALUES
-('27181', 'uang', '173000', 'Rp', 'uang');
+('27181', 'uang', '141000', 'Rp', 'uang');
 
 -- --------------------------------------------------------
 
@@ -221,12 +199,10 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama`, `alamat`, `email`, `jenis_kelamin`, `no_telepon`, `password`, `hak_akses`) VALUES
+('13302', 'arya', 'dawas', 'user@email.com', 'laki-laki', '219038', '12345', 'pengguna'),
 ('19731', 'arya Pratama Putra', 'Dawas Sari', 'aryapratamaputra888@gmail.com', 'laki-laki', '098783921', '123456', 'petugas'),
-('34077', 'Gede Rama', 'dawas', 'aadsa@email.com', 'laki-laki', '120930', '123456', 'pengguna'),
 ('3421', 'Gede', 'Badung', 'ketua@email.com', 'Laki-Laki', '0826261836187', 'ketua', 'Ketua'),
-('51411', 'yu', 'da', 'yu@email.com', 'Perempuan', '2098', '123456', 'pengguna'),
-('76216', 'ar', 'dawas', 'ar@email.com', 'laki-laki', '901283', '12345', 'pengguna'),
-('96105', 'Gede Subrata', 'fsafsa', 'testinguser@gmail.com', 'laki-laki', '908324', '123456', 'pengguna');
+('72823', 'dsa', 'dsa', 'aryatest@email.com', 'laki-laki', '213', '123456', 'pengguna');
 
 --
 -- Indexes for dumped tables

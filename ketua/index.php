@@ -28,7 +28,7 @@
                                                     while ( $datasampah = mysqli_fetch_array($selectsampahuser)) {
                                                         $total = $datasampah['jumlah_sampah']+$total ;
                                                     }
-                                                    echo $total;
+                                                    echo $total." "."KG";
                                                    
                                                    
                                                     
@@ -52,6 +52,11 @@
 
                             include 'chart.php';
                   ?>
+                  <br>
+
+                  <br>
+
+                            
                     </center>
 
                         <br>

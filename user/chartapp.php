@@ -6,7 +6,7 @@
 <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description">
-        Colum Chart  Akan menunjukkan jumlah Total Pengajuan Sampah Tertentu
+        Colum Chart  Akan menunjukkan jumlah Total Sampah Yang Terkumpul
     </p>
 </figure>
 
@@ -71,7 +71,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Jumlah Pengajuan Sampah'
+        text: 'Jumlah Pengajuan Tahun <?php $date =date('Y'); echo $date ?>'
     },
     subtitle: {
         text: ''
@@ -96,13 +96,13 @@ Highcharts.chart('container', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Pengajuan'
+            text: 'Pegajuan'
         }
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} Pengajuan</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} Sampah</b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -118,7 +118,7 @@ Highcharts.chart('container', {
                             
                             
                             <?php
-                            $select = mysqli_query($koneksi, "SELECT * FROM tb_sampah");
+                            $select = mysqli_query($koneksi, "SELECT * FROM tb_user where hak_akses ='pengguna' AND id_user = '$id'");
 
                           
                             while ($data = mysqli_fetch_array($select)) {
@@ -138,7 +138,7 @@ Highcharts.chart('container', {
                                         <?php
 
                                         for ($i=1; $i <=12; $i++) { 
-                                            $countid = mysqli_query($koneksi,"SELECT count(id_sampah) as sampah FROM tb_rekap_sampah WHERE id_sampah = '$data[id_sampah]' AND month(tanggal_masuk)='$i'");
+                                            $countid = mysqli_query($koneksi,"SELECT count(id_penukaran) as sampah FROM tb_penukaran_sampah WHERE id_user = '$id' AND month(tanggal)='$i' AND status_approval ='Approved'");
                                             $datasampah = mysqli_fetch_array($countid);
 
                                             echo $datasampah['sampah'];

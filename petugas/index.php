@@ -32,7 +32,7 @@
                                                 while ( $datasampah = mysqli_fetch_array($selectsampahuser)) {
                                                     $total = $datasampah['jumlah_sampah']+$total ;
                                                 }
-                                                echo $total;
+                                                echo $total." "."KG";
                                                
                                                
                                                 

@@ -6,7 +6,7 @@
 <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description">
-        Colum Chart  Akan menunjukkan jumlah Total Sampah Yang Terkumpul
+        Colum Chart  Akan menunjukkan jumlah Total Pengajuan Sampah Tertentu
     </p>
 </figure>
 
@@ -71,7 +71,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Jumlah Sampah'
+        text: 'Jumlah Pengajuan Sampah'
     },
     subtitle: {
         text: ''
@@ -96,13 +96,13 @@ Highcharts.chart('container', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Sampah'
+            text: 'Pengajuan'
         }
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} Sampah</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} Pengajuan</b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true

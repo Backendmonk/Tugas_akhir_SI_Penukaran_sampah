@@ -156,6 +156,20 @@
                                     
                                     </div>
 
+                                    <br>
+
+                                    <br>
+
+                                    <?php
+
+                                    include 'chartapp.php';
+
+
+                                    ?>
+
+
+                                    <br>
+
                                     <h2>Rekap Pengajuan</h2>
                         <div class="card mb-4">
                     <div class="card-body">

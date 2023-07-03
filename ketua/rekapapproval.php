@@ -59,7 +59,25 @@
 
                 <div class="row">
 
+                
+
                 <h2>Rekap Pengajuan</h2>
+
+                <form action="harian.php" method="post">
+                        <button type="submit" class="btn btn-outline-info">Lihat Rekap Harian Bulan ini</button>
+                        </form>
+                        
+                <br>
+                <br>
+                <?php
+
+                        include 'chartapp.php';
+
+
+                ?>
+
+                <br>
+
                         <div class="card mb-4">
                     <div class="card-body">
                                 <table id="datatablesSimple">

@@ -8,6 +8,7 @@ $jenis = $_POST['jenis'];
 $poin = $_POST['poin'];
 $status = "Belum";
 $idpenukaran = rand(32,99909);
+$tanggal = date('Y-m-d');
 
 if (isset($_POST['fdaftar'])) {
 
@@ -26,7 +27,7 @@ if (isset($_POST['fdaftar'])) {
         }
         else{
             $jumlahUang = $poin * 1000;
-           $qinsert = mysqli_query($koneksi,"INSERT INTO `tb_penukaran_sampah`(`id_penukaran`, `id_user`, `jenis_emoney`, `nomer`,`jml_redem`, `jumlah_uang`, `status_approval`) VALUES ('$idpenukaran','$id','$jenis','$money','$poin','$jumlahUang','$status')"); 
+           $qinsert = mysqli_query($koneksi,"INSERT INTO `tb_penukaran_sampah`(`id_penukaran`, `id_user`, `jenis_emoney`, `nomer`,`jml_redem`, `jumlah_uang`, `status_approval`,`tanggal`) VALUES ('$idpenukaran','$id','$jenis','$money','$poin','$jumlahUang','$status','$tanggal')"); 
            if ($qinsert) {
             
             $status = "berhasil";

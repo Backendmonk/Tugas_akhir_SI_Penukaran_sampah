@@ -15,6 +15,16 @@
                         <br>
                         <br>
                         <h2> Cash Flow Keluar</h2>
+                        <h5>Total : RP. <?php 
+
+                                $total = 0;
+                                $sData = mysqli_query($koneksi,"SELECT * FROM cash_flow");
+                                while ($cash = mysqli_fetch_array($sData)) {
+                                    $total = $total + $cash['Jumlah_uang_keluar'];
+
+                                    echo $total;
+                                }
+                        ?></h5>
                         <br>
                         
                         
