@@ -22,8 +22,10 @@
                                 while ($cash = mysqli_fetch_array($sData)) {
                                     $total = $total + $cash['Jumlah_uang_keluar'];
 
-                                    echo $total;
+                                    
                                 }
+
+                                echo $total;
                         ?></h5>
                         <br>
                         
