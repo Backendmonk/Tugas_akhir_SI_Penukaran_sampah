@@ -9,53 +9,53 @@
             <div class="container-fluid px-4">
                 <main>
                 <!--   Alert Hapus Data -->
-                <?php
-                        if (isset($_GET['status'])) {
-                            $status = $_GET['status'];
+                    <?php
+                            if (isset($_GET['status'])) {
+                                $status = $_GET['status'];
 
-                            if ($status=="berhasil") {
-                                 ?>
-                                  <script>
+                                if ($status=="berhasil") {
+                                    ?>
+                                    <script>
 
-                                    swal({
-                                    title: "Berhasil!",
-                                    text: "Data Ditambah!",
-                                    icon: "success"
-                                   
-                                    });
+                                        swal({
+                                        title: "Berhasil!",
+                                        text: "Data Ditambah!",
+                                        icon: "success"
+                                    
+                                        });
 
-                                    setTimeout(function(){
-                        window.location="datasampah.php";
-                       }, 2000);
+                                        setTimeout(function(){
+                            window.location="datasampah.php";
+                        }, 2000);
 
-                                    </script>
-
-
-
-                            <?php
-                            }elseif ($status=="gagal") {
-                                ?>
-                                  <script>
-
-                                    swal({
-                                    title: "Gagal",
-                                    text: "Data Gagal Ditambah!",
-                                    icon: "error"
-
-                                    });
-                                    setTimeout(function(){
-                                        window.location="datasampah.php";
-                                    }, 2000);
-                                    </script>
+                                        </script>
 
 
 
-                            <?php
+                                <?php
+                                }elseif ($status=="gagal") {
+                                    ?>
+                                    <script>
+
+                                        swal({
+                                        title: "Gagal",
+                                        text: "Data Gagal Ditambah!",
+                                        icon: "error"
+
+                                        });
+                                        setTimeout(function(){
+                                            window.location="datasampah.php";
+                                        }, 2000);
+                                        </script>
+
+
+
+                                <?php
+                                }
                             }
-                        }
 
-                        
-                ?>
+                            
+                    ?>
                
 
                         <br>
